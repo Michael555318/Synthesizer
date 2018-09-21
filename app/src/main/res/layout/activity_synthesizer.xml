@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SynthesizerActivity">
+
+    <Button
+        android:id="@+id/button_synth_a"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:text="A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_synth_bb"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:text="B♭"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_a"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_synth_b"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:text="B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_bb"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_synth_c"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:text="C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_b"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_synth_cs"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:text="C♯"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_c"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_synth_d"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:text="D"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_cs"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_synth_ds"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:text="D♯"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_d"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_synth_e"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:text="E"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_ds"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_synth_f"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:text="F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_e"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_synth_fs"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:text="F♯"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_f"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_synth_g"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:text="G"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_fs"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_synth_gs"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:text="G♯"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_g"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_main_playscale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="play scale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_main_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="196dp"
+        android:text="Create"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_main_createplay"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Play"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/button_main_createdelete"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_create"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_main_createdelete"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="X"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_create"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_main_createreset"
+        android:layout_width="80dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="52dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="8dp"
+        android:text="reset"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button_synth_g"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_main_save1"
+        android:layout_width="80dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="12dp"
+        android:text="Save 1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_create"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_playscale"
+        tools:ignore="HardcodedText" />
+        />
+
+    <TextView
+        android:id="@+id/textView_main_createnotes"
+        android:layout_width="146dp"
+        android:layout_height="109dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Your notes"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_createreset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_createdelete"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText" />
+
+    <CheckBox
+        android:id="@+id/checkbox_main_createdouble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="x2    "
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView_main_createnotes"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button_synth_fs"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_main_createwhole"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/checkbox_main_createhalf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="308dp"
+        android:text="x1/2"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/textView_main_createnotes"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button_synth_e"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkbox_main_createwhole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="x1    "
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/textView_main_createnotes"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button_synth_f"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_main_createhalf" />
+
+    <Button
+        android:id="@+id/button_main_scroll"
+        android:layout_width="76dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="12dp"
+        android:text="↓ high"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/button_synth_a"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox_main_createquarter"
+        android:layout_width="62dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="x1/4"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/checkbox_main_createhalf"
+        app:layout_constraintEnd_toStartOf="@+id/textView_main_createnotes"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button_synth_ds"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>
