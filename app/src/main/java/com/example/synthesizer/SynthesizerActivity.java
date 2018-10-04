@@ -3,6 +3,8 @@ package com.example.synthesizer;
 import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.support.annotation.ColorLong;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,6 +28,11 @@ public class SynthesizerActivity extends AppCompatActivity implements View.OnCli
     private ArrayList<Button> saveSong1;
     private ArrayList<Integer> saveDelay1;
     private ArrayList<Boolean> saveLow1;
+    private Button save2;
+    private Boolean saved2 = false;
+    private ArrayList<Button> saveSong2;
+    private ArrayList<Integer> saveDelay2;
+    private ArrayList<Boolean> saveLow2;
     //Notes
     private Map<Integer, Integer> noteMap;
     private Button scroll;
@@ -86,7 +93,7 @@ public class SynthesizerActivity extends AppCompatActivity implements View.OnCli
     private boolean doubleSpeed = false;
     private CheckBox speedxquarter;
     private Boolean quarterSpeed = false;
-
+    //Constants
     public static final float DEFAULT_VOLUME = 1.0f;
     public static final float DEFAULT_RATE = 1.0f;
     public static final int DEFAULT_PRIORITY = 1;
@@ -148,6 +155,7 @@ public class SynthesizerActivity extends AppCompatActivity implements View.OnCli
         speedxwhole = findViewById(R.id.checkbox_main_createwhole);
         speedxquarter = findViewById(R.id.checkBox_main_createquarter);
         save1 = findViewById(R.id.button_main_save1);
+        save2 = findViewById(R.id.button_main_save2);
     }
 
     private void initializeSoundPool() {
@@ -204,6 +212,7 @@ public class SynthesizerActivity extends AppCompatActivity implements View.OnCli
         speedxdouble.setOnClickListener(this);
         speedxquarter.setOnClickListener(this);
         save1.setOnClickListener(this);
+        save2.setOnClickListener(this);
     }
 
     @Override
@@ -314,6 +323,22 @@ public class SynthesizerActivity extends AppCompatActivity implements View.OnCli
                         playSong(saveSong1, saveDelay1, saveLow1);
                     } else if (!saved1) {
                         Toast.makeText(this, "Save 1 is empty.", Toast.LENGTH_SHORT).show();
+                    }
+                }
+                break;
+
+            case R.id.button_main_save2:
+                if (createMode) {
+                    saveSong2 = createNoteSequence;
+                    saveDelay2 = createDelaySequence;
+                    saveLow2 = createLowSequence;
+                    saved2 = true;
+                    Toast.makeText(this, "Song saved!", Toast.LENGTH_SHORT).show();
+                } else {
+                    if (saved2) {
+                        playSong(saveSong2, saveDelay2, saveLow2);
+                    } else if (!saved2) {
+                        Toast.makeText(this, "Save 2 is empty.", Toast.LENGTH_SHORT).show();
                     }
                 }
                 break;
@@ -534,7 +559,7 @@ public class SynthesizerActivity extends AppCompatActivity implements View.OnCli
     }
 
     private void addNote(Button button)  {
-        if (createNoteSequence.size() <= 80) {
+        if (createNoteSequence.size() <= 60) {
             createDelaySequence.add(getDelay());
             createNoteSequence.add(button);
             createLowSequence.add(low);
@@ -542,7 +567,7 @@ public class SynthesizerActivity extends AppCompatActivity implements View.OnCli
             addNotes = addNotes + addition;
             createNotes.setText(addNotes);
         } else {
-            Toast.makeText(this, "Maximum is 80 notes!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Maximum is 60 notes!", Toast.LENGTH_SHORT).show();
         }
     }
 
